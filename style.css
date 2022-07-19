@@ -70,6 +70,19 @@ header {
     opacity: 1;
 }
 
+.play {
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.877);
+    opacity: 0;
+    text-shadow: 4px 4px 10px #000;
+    cursor: pointer;
+}
+
+.play:hover {
+    opacity: 1;
+    transition: opacity .7s;
+}
+
 .rodape {
     height: 10px;
     background: linear-gradient(to right, rgb(17, 255, 0), rgb(2, 223, 65)); 
