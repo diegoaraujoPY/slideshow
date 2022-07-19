@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie o seu SliderShow</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./icone.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="header"></div>
+        <div class="menuInicial" style="background-image: url('./slider/paisagem_rio.jpg');">
+            <h1>Crie o seu próprio SlideShow</h1>
+            <div class="enviarImagens">
+                <div class="adiciona-imagem">
+                    <label class="input-envio" for="imagem">Enviar Imagens</label>
+                    <input class="urlImagem" type="file" multiple="multiple" accept="image/*" id="imagem">
+                    <label class="quantImagens" for="imagem">Nenhuma imagem selecionada!</label>
+                </div>
+                <div class="button-envio">
+                    <button onclick="adicionarImagens()">Carregar Slide</button>
+                </div>
+            </div>
+            <h11>Pressione a tecla 'ESC' para retornar a essa tela</h11>
+        </div>
+        <div class="slider" id="controlsPosition">
+            <div class="slider-controls">
+                <div class="slider-control" onclick="goNext()"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                <div class="slider-control" onclick="goNext()"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+            </div>
+            <div class="slider-width"></div>
+        </div>
+        <div class="rodape"></div>
+    </header>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    height: 10px;
+    background: linear-gradient(to left, rgb(17, 255, 0), rgb(2, 223, 65));  
+}
+
+.slider {
+    flex: 1;
+    overflow: hidden;
+}
+
+.slider-width {
+    height: 100%;
+    display: flex;
+    transition: all ease 0.5s;
+}
+
+.slider-item {
+    width: 100vw;
+    height: inherit;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    text-shadow: 4px 4px 4px #333;
+    font-size: 50px;
+}
+
+.slider-controls {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-control{
+    width: 50px;
+    height: 50px;
+    font-size: 80px;
+    color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.slider-control:hover {
+    opacity: 1;
+}
+
+.rodape {
+    height: 10px;
+    background: linear-gradient(to right, rgb(17, 255, 0), rgb(2, 223, 65)); 
+}
+
+.menuInicial {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+}
+
+.menuInicial h1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 70px;
+    color: rgb(245, 245, 245);
+    text-shadow: 4px 4px 10px #000;
+    text-align: center;
+}
+
+.adiciona-imagem {
+    height: 90%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button-envio {
+    height: 10%;
+}
+
+.button-envio button{
+    margin-right: -30px;
+    margin-top: -40px;
+    padding: 7px;
+    font-size: 17px;
+    background: rgb(0, 217, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 18px;
+    box-shadow: 2px 2px 10px rgba(79, 79, 79, 0.55);
+    cursor: pointer;
+}
+
+.button-envio button:hover {
+    background: rgb(0, 255, 251);
+    transition: background .7s;
+}
+
+.enviarImagens {
+    padding: 40px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 10px;
+    background: rgba(17, 255, 0, 0.42);
+    box-shadow: 0px 0px 10px rgba(93, 93, 93, 0.417);
+}
+
+.urlImagem {
+    display: none;
+}
+
+.input-envio {
+    background-color: rgb(189, 188, 188);
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.input-envio:hover {
+    background-color: rgb(135, 134, 134);
+    transition: background-color .7s;
+}
