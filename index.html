@@ -24,11 +24,12 @@
                     <button onclick="adicionarImagens()">Carregar Slide</button>
                 </div>
             </div>
-            <h11>Pressione a tecla 'ESC' para retornar a essa tela</h11>
+            <h11 style="font-family: Verdana; font-size: 12px; text-align: center;">Pressione a tecla 'ESC' para retornar a essa tela</br>Pressione 'ESPAÇO' para iniciar o slide</h11>
         </div>
         <div class="slider" id="controlsPosition">
             <div class="slider-controls">
                 <div class="slider-control" onclick="goNext()"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+                <div onclick="iniciarSlide()" class="play"><i class="fa fa-play" aria-hidden="true" id="play"></i></div>
                 <div class="slider-control" onclick="goNext()"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
             </div>
             <div class="slider-width"></div>
