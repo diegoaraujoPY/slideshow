@@ -1,5 +1,7 @@
 let imagensSlide = document.querySelector('.slider-width')
 let totalSlide = 0
+let play = false
+let tocar = 0
 let currentSlide = 0
 imagensSlide.innerHTML = ''
 
@@ -17,6 +19,22 @@ function goNext(){
         currentSlide = 0
     }
     updateMargin()
+}
+
+function iniciarSlide() {
+    let icone = document.querySelector('#play')
+    if(play == false){
+        tocar = setInterval(goNext, 2000)
+        icone.classList.remove('fa', 'fa-play')
+        icone.classList.add('fa', 'fa-pause')
+        play = true
+    } else {
+        clearInterval(tocar)
+        icone.classList.remove('fa', 'fa-pause')
+        icone.classList.add('fa', 'fa-play')
+        play = false
+    }
+    
 }
 
 function updateMargin(){
@@ -78,6 +96,14 @@ document.body.addEventListener('keyup', function(e){
         }
 })
 
+document.body.addEventListener('keypress', function(e){
+    if(e.key === " "){
+
+        iniciarSlide()
+
+    }
+})
+
 function atualizaContador() {
     let quantImagens = document.getElementById('imagem').files.length
     if(quantImagens > 0){
@@ -88,5 +114,3 @@ function atualizaContador() {
 }
 
 setInterval(atualizaContador, 100)
-
-// setInterval(goNext, 2000)
